@@ -1,0 +1,165 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "Build",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/build-linux.sh",
+			},
+			"osx": {
+				"command": "./scripts/build-mac.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\build.cmd"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			}
+		},
+		{
+			"label": "Run",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/run-linux.sh",
+			},
+			"osx": {
+				"command": "./scripts/run-mac.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\run.cmd"
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+
+		{
+			"label": "asmdoc",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/asmdoc.sh",
+			},
+			"osx": {
+				"command": "./scripts/asmdoc.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\asmdoc.cmd",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+
+		{
+			"label": "locales",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/locales.sh",
+			},
+			"osx": {
+				"command": "./scripts/locales.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\locales.cmd",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+
+		{
+			"label": "keymaps",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/keymaps.sh",
+			},
+			"osx": {
+				"command": "./scripts/keymaps.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\keymaps.cmd",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+
+		{
+			"label": "debug",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/run-linux.sh",
+			},
+			"osx": {
+				"command": "./scripts/run-linux.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\debug.cmd",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+
+		{
+			"label": "fonts",
+			"type": "shell",
+			"linux": {
+				"command": "./scripts/fonts.sh",
+			},
+			"osx": {
+				"command": "./scripts/fonts.sh",
+			},
+			"windows": {
+				"command": ".\\scripts\\fonts.cmd",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		}
+	]
+}
