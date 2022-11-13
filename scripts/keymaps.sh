@@ -4,6 +4,7 @@ cd keymaps
 #cc br.c
 #./a.out
 cc chloe.c
+chmod +x a.out
 ./a.out
 #cc colemak.c
 #./a.out
