@@ -339,166 +339,173 @@ int main()
     BYTE rom[4096 * 100];
 
     CLEANMAP;
-
+puts("1");
     MAPANY(PC_LCTRL,SE_GRAPH);   // MD2 is CTRL
+puts("2");
     MAPANY(PC_RCTRL,SE_GRAPH); // MD2 is CTRL
+puts("3");
     MAPANY(PC_LALT,SE_EXTEND);    // MD3 is ALT. Also is FIRE for keyboard joystick
+puts("4");
     MAPANY(PC_RALT,SE_EXTEND);    // MD3 is ALT. Also is FIRE for keyboard joystick
+puts("5");
     
     MAPANY(PC_LWIN,SE_SYMBOL);          // SYMBOL SHIFT
+puts("6");
     MAPANY(PC_RWIN,SE_SYMBOL);          // SYMBOL SHIFT  
-	MAPANY(PC_APPS,SE_COMPOSE);          //  
+puts("7");
+    MAPANY(PC_APPS,SE_COMPOSE);          //  
+puts("8");
 
     // Basic mapping: each key from PC is mapped to a key in the Chloe
-    MAP(PC_1,SE_1);
-    MAP(PC_2,SE_2);
-    MAP(PC_3,SE_3);
-    MAP(PC_4,SE_4);
-    MAP(PC_5,SE_5);
-    MAP(PC_6,SE_6);
-    MAP(PC_7,SE_7);
-    MAP(PC_8,SE_8);
-    MAP(PC_9,SE_9);
-    MAP(PC_0,SE_0);
+    MAP(PC_1,SE_1); puts("9");
+    MAP(PC_2,SE_2); puts("10");
+    MAP(PC_3,SE_3); puts("11");
+    MAP(PC_4,SE_4); puts("12");
+    MAP(PC_5,SE_5); puts("13");
+    MAP(PC_6,SE_6); puts("14");
+    MAP(PC_7,SE_7); puts("15");
+    MAP(PC_8,SE_8); puts("16");
+    MAP(PC_9,SE_9); puts("17");
+    MAP(PC_0,SE_0); puts("18");
 
-    MAP(PC_Q,SE_Q);
-    MAP(PC_W,SE_W);
-    MAP(PC_E,SE_E);
-    MAP(PC_R,SE_R);
-    MAP(PC_T,SE_T);
-    MAP(PC_Y,SE_Y);
-    MAP(PC_U,SE_U);
-    MAP(PC_I,SE_I);
-    MAP(PC_O,SE_O);
-    MAP(PC_P,SE_P);
-    MAP(PC_A,SE_A);
-    MAP(PC_S,SE_S);
-    MAP(PC_D,SE_D);
-    MAP(PC_F,SE_F);
-    MAP(PC_G,SE_G);
-    MAP(PC_H,SE_H);
-    MAP(PC_J,SE_J);
-    MAP(PC_K,SE_K);
-    MAP(PC_L,SE_L);
-    MAP(PC_Z,SE_Z);
-    MAP(PC_X,SE_X);
-    MAP(PC_C,SE_C);
-    MAP(PC_V,SE_V);
-    MAP(PC_B,SE_B);
-    MAP(PC_N,SE_N);
-    MAP(PC_M,SE_M);
+    MAP(PC_Q,SE_Q); puts("19");
+    MAP(PC_W,SE_W); puts("20");
+    MAP(PC_E,SE_E); puts("21");
+    MAP(PC_R,SE_R); puts("22");
+    MAP(PC_T,SE_T); puts("23");
+    MAP(PC_Y,SE_Y); puts("24");
+    MAP(PC_U,SE_U); puts("25");
+    MAP(PC_I,SE_I); puts("26");
+    MAP(PC_O,SE_O); puts("27");
+    MAP(PC_P,SE_P); puts("28");
+    MAP(PC_A,SE_A); puts("29");
+    MAP(PC_S,SE_S); puts("30");
+    MAP(PC_D,SE_D); puts("31");
+    MAP(PC_F,SE_F); puts("32");
+    MAP(PC_G,SE_G); puts("33");
+    MAP(PC_H,SE_H); puts("34");
+    MAP(PC_J,SE_J); puts("35");
+    MAP(PC_K,SE_K); puts("36");
+    MAP(PC_L,SE_L); puts("37");
+    MAP(PC_Z,SE_Z); puts("38");
+    MAP(PC_X,SE_X); puts("39");
+    MAP(PC_C,SE_C); puts("40");
+    MAP(PC_V,SE_V); puts("41");
+    MAP(PC_B,SE_B); puts("42");
+    MAP(PC_N,SE_N); puts("43");
+    MAP(PC_M,SE_M); puts("44");
 
-    MAP(PC_GRAVEAC,SE_POUND);
-    MAP(MD_SHIFT|PC_GRAVEAC,SE_TILDE);
+    MAP(PC_GRAVEAC,SE_POUND); puts("45");
+    MAP(MD_SHIFT|PC_GRAVEAC,SE_TILDE); puts("46");
 
-    MAP(MD_SHIFT|PC_Q,SE_CAPS<<8|SE_Q);
-    MAP(MD_SHIFT|PC_W,SE_CAPS<<8|SE_W);
-    MAP(MD_SHIFT|PC_E,SE_CAPS<<8|SE_E);
-    MAP(MD_SHIFT|PC_R,SE_CAPS<<8|SE_R);
-    MAP(MD_SHIFT|PC_T,SE_CAPS<<8|SE_T);
-    MAP(MD_SHIFT|PC_Y,SE_CAPS<<8|SE_Y);
-    MAP(MD_SHIFT|PC_U,SE_CAPS<<8|SE_U);
-    MAP(MD_SHIFT|PC_I,SE_CAPS<<8|SE_I);
-    MAP(MD_SHIFT|PC_O,SE_CAPS<<8|SE_O);
-    MAP(MD_SHIFT|PC_P,SE_CAPS<<8|SE_P);
-    MAP(MD_SHIFT|PC_A,SE_CAPS<<8|SE_A);
-    MAP(MD_SHIFT|PC_S,SE_CAPS<<8|SE_S);
-    MAP(MD_SHIFT|PC_D,SE_CAPS<<8|SE_D);
-    MAP(MD_SHIFT|PC_F,SE_CAPS<<8|SE_F);
-    MAP(MD_SHIFT|PC_G,SE_CAPS<<8|SE_G);
-    MAP(MD_SHIFT|PC_H,SE_CAPS<<8|SE_H);
-    MAP(MD_SHIFT|PC_J,SE_CAPS<<8|SE_J);
-    MAP(MD_SHIFT|PC_K,SE_CAPS<<8|SE_K);
-    MAP(MD_SHIFT|PC_L,SE_CAPS<<8|SE_L);
-    MAP(MD_SHIFT|PC_Z,SE_CAPS<<8|SE_Z);
-    MAP(MD_SHIFT|PC_X,SE_CAPS<<8|SE_X);
-    MAP(MD_SHIFT|PC_C,SE_CAPS<<8|SE_C);
-    MAP(MD_SHIFT|PC_V,SE_CAPS<<8|SE_V);
-    MAP(MD_SHIFT|PC_B,SE_CAPS<<8|SE_B);
-    MAP(MD_SHIFT|PC_N,SE_CAPS<<8|SE_N);
-    MAP(MD_SHIFT|PC_M,SE_CAPS<<8|SE_M);
+    MAP(MD_SHIFT|PC_Q,SE_CAPS<<8|SE_Q); puts("47");
+    MAP(MD_SHIFT|PC_W,SE_CAPS<<8|SE_W); puts("48");
+    MAP(MD_SHIFT|PC_E,SE_CAPS<<8|SE_E); puts("49");
+    MAP(MD_SHIFT|PC_R,SE_CAPS<<8|SE_R); puts("50");
+    MAP(MD_SHIFT|PC_T,SE_CAPS<<8|SE_T); puts("51");
+    MAP(MD_SHIFT|PC_Y,SE_CAPS<<8|SE_Y); puts("52");
+    MAP(MD_SHIFT|PC_U,SE_CAPS<<8|SE_U); puts("53");
+    MAP(MD_SHIFT|PC_I,SE_CAPS<<8|SE_I); puts("54");
+    MAP(MD_SHIFT|PC_O,SE_CAPS<<8|SE_O); puts("55");
+    MAP(MD_SHIFT|PC_P,SE_CAPS<<8|SE_P); puts("56");
+    MAP(MD_SHIFT|PC_A,SE_CAPS<<8|SE_A); puts("57");
+    MAP(MD_SHIFT|PC_S,SE_CAPS<<8|SE_S); puts("58");
+    MAP(MD_SHIFT|PC_D,SE_CAPS<<8|SE_D); puts("59");
+    MAP(MD_SHIFT|PC_F,SE_CAPS<<8|SE_F); puts("60");
+    MAP(MD_SHIFT|PC_G,SE_CAPS<<8|SE_G); puts("61");
+    MAP(MD_SHIFT|PC_H,SE_CAPS<<8|SE_H); puts("62");
+    MAP(MD_SHIFT|PC_J,SE_CAPS<<8|SE_J); puts("63");
+    MAP(MD_SHIFT|PC_K,SE_CAPS<<8|SE_K); puts("64");
+    MAP(MD_SHIFT|PC_L,SE_CAPS<<8|SE_L); puts("65");
+    MAP(MD_SHIFT|PC_Z,SE_CAPS<<8|SE_Z); puts("66");
+    MAP(MD_SHIFT|PC_X,SE_CAPS<<8|SE_X); puts("67");
+    MAP(MD_SHIFT|PC_C,SE_CAPS<<8|SE_C); puts("68");
+    MAP(MD_SHIFT|PC_V,SE_CAPS<<8|SE_V); puts("69");
+    MAP(MD_SHIFT|PC_B,SE_CAPS<<8|SE_B); puts("70");
+    MAP(MD_SHIFT|PC_N,SE_CAPS<<8|SE_N); puts("71");
+    MAP(MD_SHIFT|PC_M,SE_CAPS<<8|SE_M); puts("72");
 
-    MAPANY(PC_SPACE,SE_SPACE);
-    MAPANY(PC_ENTER,SE_ENTER);
+    MAPANY(PC_SPACE,SE_SPACE); puts("73");
+    MAPANY(PC_ENTER,SE_ENTER); puts("74");
 
     //Complex mapping. This is for the US keyboard although many
     //combos can be used with any other PC keyboard
-    MAPANY(PC_ESC,SE_BREAK);
-    MAPANY(PC_CPSLOCK,SE_CPSLOCK);
-    MAPANY(PC_TAB,SE_EXTEND);
-    MAP(PC_BKSPACE,SE_DELETE);
-    MAPANY(PC_UP,SE_UP);
-    MAPANY(PC_DOWN,SE_DOWN);
-    MAPANY(PC_LEFT,SE_LEFT);
-    MAPANY(PC_RIGHT,SE_RIGHT);
+    MAPANY(PC_ESC,SE_BREAK); puts("75");
+    MAPANY(PC_CPSLOCK,SE_CPSLOCK); puts("76");
+    MAPANY(PC_TAB,SE_EXTEND); puts("77");
+    MAP(PC_BKSPACE,SE_DELETE); puts("78");
+    MAPANY(PC_UP,SE_UP); puts("79");
+    MAPANY(PC_DOWN,SE_DOWN); puts("80");
+    MAPANY(PC_LEFT,SE_LEFT); puts("81");
+    MAPANY(PC_RIGHT,SE_RIGHT); puts("82");
 
 
     //keypad
-    MAPANY(PC_KP_DIVIS,SE_SLASH);
-    MAPANY(PC_KP_MULT,SE_STAR);
-    MAPANY(PC_KP_MINUS,SE_MINUS);
-    MAPANY(PC_KP_PLUS,SE_PLUS);
-    MAPANY(PC_KP_ENTER,SE_ENTER);    
-    MAPANY(PC_KP_DOT,SE_DOT); 
+    MAPANY(PC_KP_DIVIS,SE_SLASH); puts("83");
+    MAPANY(PC_KP_MULT,SE_STAR); puts("84");
+    MAPANY(PC_KP_MINUS,SE_MINUS); puts("85");
+    MAPANY(PC_KP_PLUS,SE_PLUS); puts("86");
+    MAPANY(PC_KP_ENTER,SE_ENTER); puts("87");
+    MAPANY(PC_KP_DOT,SE_DOT);  puts("88");
 
-    MAPANY(PC_KP_7,SE_7);
-    MAPANY(PC_KP_8,SE_8);
-    MAPANY(PC_KP_9,SE_9);
-    MAPANY(PC_KP_4,SE_4);
-    MAPANY(PC_KP_5,SE_5);
-    MAPANY(PC_KP_6,SE_6);
-    MAPANY(PC_KP_1,SE_1);
-    MAPANY(PC_KP_2,SE_2);
-    MAPANY(PC_KP_3,SE_3);
+    MAPANY(PC_KP_7,SE_7); puts("89");
+    MAPANY(PC_KP_8,SE_8); puts("90");
+    MAPANY(PC_KP_9,SE_9); puts("91");
+    MAPANY(PC_KP_4,SE_4); puts("92");
+    MAPANY(PC_KP_5,SE_5); puts("93");
+    MAPANY(PC_KP_6,SE_6); puts("94");
+    MAPANY(PC_KP_1,SE_1); puts("95");
+    MAPANY(PC_KP_2,SE_2); puts("96");
+    MAPANY(PC_KP_3,SE_3); puts("97");
 
     //Some keys and shift+key mappings for the US keyboard
-    MAP(MD_SHIFT|PC_1,SE_BANG);
-    MAP(MD_SHIFT|PC_2,SE_AT);
-    MAP(MD_SHIFT|PC_3,SE_HASH);
-    MAP(MD_SHIFT|PC_4,SE_DOLLAR);
-    MAP(MD_SHIFT|PC_5,SE_PERCEN);
-    MAP(MD_SHIFT|PC_6,SE_CARET);
-    MAP(MD_SHIFT|PC_7,SE_AMP);
-    MAP(MD_SHIFT|PC_8,SE_STAR);
-    MAP(MD_SHIFT|PC_9,SE_PAROPEN);
-    MAP(MD_SHIFT|PC_0,SE_PARCLOS);
-    MAP(PC_MINUS,SE_MINUS);
-    MAP(MD_SHIFT|PC_MINUS,SE_UNDERSC);
-    MAP(PC_EQUAL,SE_EQUAL);
-    MAP(MD_SHIFT|PC_EQUAL,SE_PLUS);
-    MAP(PC_BRAOPEN,SE_BRAOPEN);
-    MAP(MD_SHIFT|PC_BRAOPEN,SE_CUROPEN);
-    MAP(PC_BRACLOS,SE_BRACLOS);
-    MAP(MD_SHIFT|PC_BRACLOS,SE_CURCLOS);
-    MAP(PC_BACKSLA,SE_BACKSLA);
-    MAP(MD_SHIFT|PC_BACKSLA,SE_PIPE);
-    MAP(PC_APOSTRO,SE_APOSTRO);
-    MAP(MD_SHIFT|PC_APOSTRO,SE_QUOTE);
-    MAP(PC_COMMA,SE_COMMA);
-    MAP(MD_SHIFT|PC_COMMA,SE_LESS);
-    MAP(PC_DOT,SE_DOT);
-    MAP(MD_SHIFT|PC_DOT,SE_GREATER);
-    MAP(PC_SLASH,SE_SLASH);
-    MAP(MD_SHIFT|PC_SLASH,SE_QUEST);
-    MAP(PC_SEMICOL,SE_SEMICOL);
-    MAP(MD_SHIFT|PC_SEMICOL,SE_COLON);
+    MAP(MD_SHIFT|PC_1,SE_BANG); puts("98");
+    MAP(MD_SHIFT|PC_2,SE_AT); puts("99");
+    MAP(MD_SHIFT|PC_3,SE_HASH); puts("100");
+    MAP(MD_SHIFT|PC_4,SE_DOLLAR); puts("101");
+    MAP(MD_SHIFT|PC_5,SE_PERCEN); puts("102");
+    MAP(MD_SHIFT|PC_6,SE_CARET); puts("103");
+    MAP(MD_SHIFT|PC_7,SE_AMP); puts("104");
+    MAP(MD_SHIFT|PC_8,SE_STAR); puts("105");
+    MAP(MD_SHIFT|PC_9,SE_PAROPEN); puts("106");
+    MAP(MD_SHIFT|PC_0,SE_PARCLOS); puts("107");
+    MAP(PC_MINUS,SE_MINUS); puts("108");
+    MAP(MD_SHIFT|PC_MINUS,SE_UNDERSC); puts("109");
+    MAP(PC_EQUAL,SE_EQUAL); puts("110");
+    MAP(MD_SHIFT|PC_EQUAL,SE_PLUS); puts("111");
+    MAP(PC_BRAOPEN,SE_BRAOPEN); puts("112");
+    MAP(MD_SHIFT|PC_BRAOPEN,SE_CUROPEN); puts("113");
+    MAP(PC_BRACLOS,SE_BRACLOS); puts("114");
+    MAP(MD_SHIFT|PC_BRACLOS,SE_CURCLOS); puts("115");
+    MAP(PC_BACKSLA,SE_BACKSLA); puts("116");
+    MAP(MD_SHIFT|PC_BACKSLA,SE_PIPE); puts("117");
+    MAP(PC_APOSTRO,SE_APOSTRO); puts("118");
+    MAP(MD_SHIFT|PC_APOSTRO,SE_QUOTE); puts("119");
+    MAP(PC_COMMA,SE_COMMA); puts("120");
+    MAP(MD_SHIFT|PC_COMMA,SE_LESS); puts("121");
+    MAP(PC_DOT,SE_DOT); puts("122");
+    MAP(MD_SHIFT|PC_DOT,SE_GREATER); puts("123");
+    MAP(PC_SLASH,SE_SLASH); puts("124");
+    MAP(MD_SHIFT|PC_SLASH,SE_QUEST); puts("125");
+    MAP(PC_SEMICOL,SE_SEMICOL); puts("126");
+    MAP(MD_SHIFT|PC_SEMICOL,SE_COLON); puts("127");
 
 // editing cluster
-	MAP(PC_INSERT,SE_INSERT);
-	MAP(MD_SHIFT|PC_INSERT,SE_HELP);
-	MAPANY(PC_DELETE,SE_DEL);
-	MAP(PC_HOME,SE_HOME);
-	MAP(MD_SHIFT|PC_HOME,SE_CLR);
-	MAPANY(PC_END,SE_END);
-	MAPANY(PC_PGUP,SE_TRUE);
-	MAPANY(PC_PGDOWN,SE_INVERSE);
+	MAP(PC_INSERT,SE_INSERT); puts("128");
+	MAP(MD_SHIFT|PC_INSERT,SE_HELP); puts("129");
+	MAPANY(PC_DELETE,SE_DEL); puts("130");
+	MAP(PC_HOME,SE_HOME); puts("131");
+	MAP(MD_SHIFT|PC_HOME,SE_CLR); puts("132");
+	MAPANY(PC_END,SE_END); puts("133");
+	MAPANY(PC_PGUP,SE_TRUE); puts("134");
+	MAPANY(PC_PGDOWN,SE_INVERSE); puts("135");
 
     // End of mapping. Save .HEX file for Verilog
     //SAVEMAP1HEX("keyb1_us_hex.txt");
     //SAVEMAP2HEX("keyb2_us_hex.txt");
     // And map file for loading from ESXDOS
 
-    SAVEMAPBIN("../chloehd/SYSTEM/KEYBOARD.S/CHLOE.KB");
+    SAVEMAPBIN("../chloehd/SYSTEM/KEYBOARD.S/CHLOE.KB"); puts("136");
 //    SAVEMAPBIN("../chloehd/SYSTEM/KEYBOARD.S/US.KB");
 	
 	return 0;
