@@ -305,14 +305,14 @@ D + 1: key2 (or 0 if there is none)
                          
 #define CLEANMAP {                                                            \
                     int i;                                                    \
-                    for (i=0;i<(sizeof(rom)/sizeof(rom[0]));i++)              \
+                    for (i=0;i<(4096/1);i++)              \
                       rom[i] = 0;                                             \
                  }
 #define SAVEMAP1HEX(name) {                                                   \
                            FILE *f;                                           \
                            int i;                                             \
                            f=fopen(name,"w");                                 \
-                           for(i=0;i<(sizeof(rom)/sizeof(rom[0]));i+=2)       \
+                           for(i=0;i<(4096/1);i+=2)       \
                              fprintf(f,"%.2X\n",rom[i]);                      \
                            fclose(f);                                         \
                          }
@@ -321,7 +321,7 @@ D + 1: key2 (or 0 if there is none)
                            FILE *f;                                           \
                            int i;                                             \
                            f=fopen(name,"w");                                 \
-                           for(i=1;i<(sizeof(rom)/sizeof(rom[0]));i+=2)       \
+                           for(i=1;i<(4096/1);i+=2)       \
                                fprintf(f,"%.2X\n",rom[i]);                    \
                            fclose(f);                                         \
                          }
@@ -329,14 +329,14 @@ D + 1: key2 (or 0 if there is none)
 #define SAVEMAPBIN(name) {                                                      \
                            FILE *f;                                             \
                            f=fopen(name,"wb");                                  \
-                           fwrite (rom, 1, sizeof(rom), f);                     \
+                           fwrite (rom, 1, 4096, f);                     \
                            fclose(f);                                           \
                          }
 
 
 int main()
 {
-    BYTE rom[4096];
+    BYTE rom[4096 * 100];
 
     CLEANMAP;
 
