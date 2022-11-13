@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  keympas:
+  keymaps:
     runs-on: ubuntu-latest
     
 
