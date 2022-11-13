@@ -1,20 +1,20 @@
 cd keymaps
-gcc azerty.c -o map
-./map
-gcc br.c -o map
-./map
-gcc chloe.c -o map
-./map
-gcc colemak.c -o map
-./map
-gcc dvorak.c -o map
-./map
-gcc es.c -o map
-./map
-gcc jcuken.c -o map
-./map
-gcc qwertz.c -o map
-./map
-gcc us.c -o map
-./map
-rm map
+cc azerty.c
+./a.out
+cc br.c
+./a.out
+cc chloe.c
+./a.out
+cc colemak.c
+./a.out
+cc dvorak.c
+./a.out
+cc es.c
+./a.out
+cc jcuken.c
+./a.out
+cc qwertz.c
+./a.out
+cc us.c
+./a.out
+rm a.out
